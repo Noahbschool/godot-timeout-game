@@ -1,27 +1,72 @@
 [gd_scene format=3 uid="uid://b3qdn1nqan5yd"]
 
-[ext_resource type="Script" uid="uid://dh3ds1prw4fjx" path="res://scenes/player.gd" id="1_3vyb7"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://ckbxsjdx4b4gx" path="res://graphics/idle.png" id="2_g2els"]
+
+[sub_resource type="Animation" id="Animation_qhqgy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(20, 5, 160, 160)]
+}
 
 [sub_resource type="Animation" id="Animation_g2els"]
 resource_name = "idle"
-length = 2.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(20, 5, 160, 160), Rect2(195, 5, 160, 160), Rect2(20, 5, 160, 160), Rect2(195, 5, 160, 160), Rect2(20, 5, 160, 160)]
+}
+
+[sub_resource type="Animation" id="Animation_dqkch"]
+resource_name = "move"
 step = 0.25
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqgy"]
 _data = {
-&"idle": SubResource("Animation_g2els")
+&"RESET": SubResource("Animation_qhqgy"),
+&"idle": SubResource("Animation_g2els"),
+&"move": SubResource("Animation_dqkch")
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=1556671523]
 script = ExtResource("1_3vyb7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=139139626]
+zoom = Vector2(3, 3)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1686377587]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=1103273923]
 libraries/ = SubResource("AnimationLibrary_qhqgy")
+autoplay = &"idle"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=479389261]
+position = Vector2(0, -40)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_g2els")
+region_enabled = true
+region_rect = Rect2(20, 5, 160, 160)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1257385178]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1306299789]
+visible = false
+position = Vector2(-1, 0)
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(-16, -10, -51, -10, -45, -21, -64, -42, -34, -73, -51, -85, -51, -91, -30, -102, -30, -110, -41, -107, -46, -111, -65, -110, -44, -135, -40, -134, -40, -130, -24, -147, -8, -153, 4, -152, 20, -137, 31, -120, 55, -108, 56, -99, 50, -91, 38, -87, 39, -68, 54, -33, 54, -28, 47, -23, 53, -17, 53, -10, 18, -9, 17, -15, -15, -15)
