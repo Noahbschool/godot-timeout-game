@@ -1,12 +1,26 @@
 [gd_scene format=3 uid="uid://b3qdn1nqan5yd"]
 
+[ext_resource type="Script" uid="uid://dh3ds1prw4fjx" path="res://scenes/player.gd" id="1_3vyb7"]
+
+[sub_resource type="Animation" id="Animation_g2els"]
+resource_name = "idle"
+length = 2.0
+step = 0.25
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqgy"]
+_data = {
+&"idle": SubResource("Animation_g2els")
+}
+
 [node name="Player" type="CharacterBody2D" unique_id=1556671523]
+script = ExtResource("1_3vyb7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=139139626]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1686377587]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=1103273923]
+libraries/ = SubResource("AnimationLibrary_qhqgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=479389261]
 

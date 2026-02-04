@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bfm3n0ehu7ybj"]
 
 [ext_resource type="Texture2D" uid="uid://v6aeey70u727" path="res://graphics/Ijs achtergrond.png" id="1_cd1xg"]
+[ext_resource type="PackedScene" uid="uid://b3qdn1nqan5yd" path="res://scenes/player.tscn" id="2_t18mc"]
 
 [node name="Level one" type="Node2D" unique_id=878780462]
 
@@ -8,3 +9,7 @@
 position = Vector2(960, 539.99994)
 scale = Vector2(0.24000002, 0.24000001)
 texture = ExtResource("1_cd1xg")
+
+[node name="Player" parent="." unique_id=1556671523 instance=ExtResource("2_t18mc")]
+position = Vector2(960, 539.99994)
+scale = Vector2(0.24000002, 0.24000001)
