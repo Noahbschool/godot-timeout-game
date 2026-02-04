@@ -11,4 +11,4 @@ scale = Vector2(0.24000002, 0.24000001)
 texture = ExtResource("1_cd1xg")
 
 [node name="Player" parent="." unique_id=1556671523 instance=ExtResource("2_t18mc")]
-position = Vector2(521, 421)
+position = Vector2(323, 576)
