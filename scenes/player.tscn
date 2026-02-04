@@ -1,23 +1,27 @@
 [gd_scene format=3 uid="uid://b3qdn1nqan5yd"]
 
-[ext_resource type="Texture2D" uid="uid://ckbxsjdx4b4gx" path="res://graphics/idle.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dh3ds1prw4fjx" path="res://scenes/player.gd" id="1_3vyb7"]
+
+[sub_resource type="Animation" id="Animation_g2els"]
+resource_name = "idle"
+length = 2.0
+step = 0.25
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqgy"]
+_data = {
+&"idle": SubResource("Animation_g2els")
+}
 
 [node name="Player" type="CharacterBody2D" unique_id=1556671523]
+script = ExtResource("1_3vyb7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=139139626]
-zoom = Vector2(3, 3)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1686377587]
-position = Vector2(475, 249)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=1103273923]
+libraries/ = SubResource("AnimationLibrary_qhqgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=479389261]
-position = Vector2(-482, -289)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_3vyb7")
-region_enabled = true
-region_rect = Rect2(0, 0, 160, 160)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1584399544]
-polygon = PackedVector2Array(-6, -2, -22, -3, -20, -8, -30, -19, -14, -34, -23, -39, -23, -43, -12, -49, -12, -54, -18, -51, -21, -53, -30, -52, -19, -64, -17, -62, -5, -73, 3, -74, 13, -65, 18, -57, 30, -52, 30, -46, 22, -41, 22, -32, 30, -14, 26, -9, 29, -4, 29, -2, 12, -2, 11, -5, -5, -5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1257385178]
