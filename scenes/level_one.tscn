@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b3qdn1nqan5yd" path="res://scenes/player.tscn" id="2_t18mc"]
 
 [node name="Level one" type="Node2D" unique_id=878780462]
-script = ExtResource("1_843q2")
 
 [node name="IjsAchtergrond" type="Sprite2D" parent="." unique_id=2102928856]
 position = Vector2(960, 539.99994)
