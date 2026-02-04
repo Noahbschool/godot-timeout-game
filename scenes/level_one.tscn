@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bfm3n0ehu7ybj"]
+
+[ext_resource type="Texture2D" uid="uid://v6aeey70u727" path="res://graphics/Ijs achtergrond.png" id="1_cd1xg"]
+
+[node name="Level one" type="Node2D" unique_id=878780462]
+
+[node name="IjsAchtergrond" type="Sprite2D" parent="." unique_id=2102928856]
+position = Vector2(960, 539.99994)
+scale = Vector2(0.24000002, 0.24000001)
+texture = ExtResource("1_cd1xg")

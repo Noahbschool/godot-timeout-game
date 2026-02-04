@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2q3iobpkr5b"
-path="res://.godot/imported/caracter game.png-2a06d9e9a3839338cbe399242f4f8ad6.ctex"
+uid="uid://dbxukcl1l5ve4"
+path="res://.godot/imported/push and jump.png-6716b13e2970aa43c55f4130db73c54c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/caracter game.png"
-dest_files=["res://.godot/imported/caracter game.png-2a06d9e9a3839338cbe399242f4f8ad6.ctex"]
+source_file="res://graphics/push and jump.png"
+dest_files=["res://.godot/imported/push and jump.png-6716b13e2970aa43c55f4130db73c54c.ctex"]
 
 [params]
 
