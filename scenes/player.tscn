@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3qdn1nqan5yd"]
 
 [ext_resource type="Script" uid="uid://dh3ds1prw4fjx" path="res://scenes/player.gd" id="1_3vyb7"]
-[ext_resource type="Texture2D" uid="uid://ckbxsjdx4b4gx" path="res://graphics/idle.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://jtjxwk1570gg" path="res://graphics/alle movement.png" id="2_g2els"]
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 length = 0.001
@@ -18,6 +18,22 @@ tracks/0/keys = {
 "values": [Rect2(20, 5, 160, 160)]
 }
 
+[sub_resource type="Animation" id="Animation_tuyoq"]
+resource_name = "fall"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(262, 1367, 174, 175)]
+}
+
 [sub_resource type="Animation" id="Animation_g2els"]
 resource_name = "idle"
 loop_mode = 1
@@ -32,26 +48,61 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Rect2(20, 5, 160, 160), Rect2(195, 5, 160, 160), Rect2(20, 5, 160, 160), Rect2(195, 5, 160, 160), Rect2(20, 5, 160, 160)]
+"values": [Rect2(262, 25, 120, 150), Rect2(426, 25, 120, 150), Rect2(262, 25, 120, 150), Rect2(426, 25, 120, 150), Rect2(262, 25, 120, 150)]
+}
+
+[sub_resource type="Animation" id="Animation_qlg0r"]
+resource_name = "jump"
+length = 0.75
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(257, 769, 160, 140), Rect2(476, 760, 160, 145), Rect2(659, 760, 160, 145), Rect2(849, 760, 160, 145)]
 }
 
 [sub_resource type="Animation" id="Animation_dqkch"]
 resource_name = "move"
+length = 1.75
+loop_mode = 1
 step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5054867, 0.75, 1, 1.25, 1.5, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(267, 1000, 158, 146), Rect2(428, 1000, 158, 146), Rect2(590, 1000, 158, 146), Rect2(755, 1000, 158, 146), Rect2(267, 1202, 158, 146), Rect2(427, 1202, 158, 146), Rect2(590, 1202, 158, 146), Rect2(755, 1202, 158, 146)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqgy"]
 _data = {
 &"RESET": SubResource("Animation_qhqgy"),
+&"fall": SubResource("Animation_tuyoq"),
 &"idle": SubResource("Animation_g2els"),
+&"jump": SubResource("Animation_qlg0r"),
 &"move": SubResource("Animation_dqkch")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
-radius = 19.0
-height = 66.0
+radius = 21.0
+height = 64.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1556671523]
 script = ExtResource("1_3vyb7")
+jump_power = 8.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=139139626]
 zoom = Vector2(3, 3)
@@ -61,14 +112,16 @@ zoom = Vector2(3, 3)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=1103273923]
 libraries/ = SubResource("AnimationLibrary_qhqgy")
 autoplay = &"idle"
+speed_scale = 0.75
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=479389261]
-position = Vector2(0, -40)
+position = Vector2(1, -36)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_g2els")
 region_enabled = true
 region_rect = Rect2(20, 5, 160, 160)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1445921420]
-position = Vector2(0, -37)
+visible = false
+position = Vector2(1, -32)
 shape = SubResource("CapsuleShape2D_g2els")
