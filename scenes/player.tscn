@@ -46,6 +46,10 @@ _data = {
 &"move": SubResource("Animation_dqkch")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 19.0
+height = 66.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1556671523]
 script = ExtResource("1_3vyb7")
 
@@ -65,8 +69,6 @@ texture = ExtResource("2_g2els")
 region_enabled = true
 region_rect = Rect2(20, 5, 160, 160)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1306299789]
-visible = false
-position = Vector2(-1, 0)
-scale = Vector2(0.5, 0.5)
-polygon = PackedVector2Array(-16, -10, -51, -10, -45, -21, -64, -42, -34, -73, -51, -85, -51, -91, -30, -102, -30, -110, -41, -107, -46, -111, -65, -110, -44, -135, -40, -134, -40, -130, -24, -147, -8, -153, 4, -152, 20, -137, 31, -120, 55, -108, 56, -99, 50, -91, 38, -87, 39, -68, 54, -33, 54, -28, 47, -23, 53, -17, 53, -10, 18, -9, 17, -15, -15, -15)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1445921420]
+position = Vector2(0, -37)
+shape = SubResource("CapsuleShape2D_g2els")
