@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4063r47dl7ha"
-path="res://.godot/imported/Naamloos-1 1.png-b71718144cae8a8c9b8162a5a8950ae5.ctex"
+uid="uid://bo68s8d8321fg"
+path="res://.godot/imported/tiles (2) (1).png-e65b6e3f7f3fccb75c68e179009959b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Naamloos-1 1.png"
-dest_files=["res://.godot/imported/Naamloos-1 1.png-b71718144cae8a8c9b8162a5a8950ae5.ctex"]
+source_file="res://graphics/tiles (2) (1).png"
+dest_files=["res://.godot/imported/tiles (2) (1).png-e65b6e3f7f3fccb75c68e179009959b9.ctex"]
 
 [params]
 
