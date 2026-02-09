@@ -203,6 +203,7 @@ layer_0/tile_data = PackedInt32Array(4063234, 9699328, 8, 4063235, 9699328, 8, 4
 [node name="TileMap2" type="TileMap" parent="." unique_id=244870774]
 tile_set = SubResource("TileSet_vsfy4")
 format = 2
+layer_0/tile_data = PackedInt32Array(4063245, 0, 0, 3932180, 0, 0, 3276842, 7471104, 18, 3866685, 6684672, 29)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1708487006]
 
