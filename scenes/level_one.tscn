@@ -173,6 +173,8 @@ terrain_set_0/terrain_2/name = "crystal ground"
 terrain_set_0/terrain_2/color = Color(0.574836, 0.37623766, 0.71102124, 1)
 sources/0 = SubResource("TileSetAtlasSource_5rfim")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4wdr"]
+size = Vector2(3550, 30)
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r4wdr"]
 texture = ExtResource("3_5rfim")
 texture_region_size = Vector2i(1, 4)
@@ -209,4 +211,13 @@ layer_0/tile_data = PackedInt32Array(3932186, 7471105, 18, 3866663, 6684673, 29,
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1708487006]
 
-[node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("4_5rfim")]
+[node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("3_5rfim")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1596918262]
+position = Vector2(197, 1199)
+script = ExtResource("4_5rfim")
+death_screen_scene = ExtResource("5_r4wdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1254744146]
+position = Vector2(679, -168)
+shape = SubResource("RectangleShape2D_r4wdr")
