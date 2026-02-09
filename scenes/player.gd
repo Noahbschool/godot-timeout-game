@@ -45,4 +45,7 @@ func update_animations(direction):
 		new_anim = "idle"
 
 	if animation_player.current_animation != new_anim:
-		animation_player.play(new_anim)
+		if new_anim == "move":
+			animation_player.play(new_anim, -1.0, 2.5) # 1.5 = 150% speed
+		else:
+			animation_player.play(new_anim)
