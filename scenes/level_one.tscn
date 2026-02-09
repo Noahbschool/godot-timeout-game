@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://b3qdn1nqan5yd" path="res://scenes/player.tscn" id="2_t18mc"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="3_5rfim"]
 [ext_resource type="Texture2D" uid="uid://byuwy7tu4ww2o" path="res://graphics/tiles.png" id="3_843q2"]
+[ext_resource type="Script" uid="uid://uixh7bolw2cb" path="res://scripts/area_2d.gd" id="4_5rfim"]
+[ext_resource type="PackedScene" uid="uid://1tbstyjx8krv" path="res://scenes/death_menu.tscn" id="5_r4wdr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5rfim"]
 texture = ExtResource("3_843q2")
@@ -172,6 +174,9 @@ terrain_set_0/terrain_2/name = "crystal ground"
 terrain_set_0/terrain_2/color = Color(0.574836, 0.37623766, 0.71102124, 1)
 sources/0 = SubResource("TileSetAtlasSource_5rfim")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4wdr"]
+size = Vector2(3550, 30)
+
 [node name="Level one" type="Node2D" unique_id=878780462]
 
 [node name="Player" parent="." unique_id=1556671523 instance=ExtResource("2_t18mc")]
@@ -185,3 +190,12 @@ layer_0/tile_data = PackedInt32Array(4063234, 9699328, 8, 4063235, 9699328, 8, 4
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1708487006]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("3_5rfim")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1596918262]
+position = Vector2(197, 1199)
+script = ExtResource("4_5rfim")
+death_screen_scene = ExtResource("5_r4wdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1254744146]
+position = Vector2(679, -168)
+shape = SubResource("RectangleShape2D_r4wdr")
