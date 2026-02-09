@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3qdn1nqan5yd"]
 
-[ext_resource type="Script" uid="uid://dh3ds1prw4fjx" path="res://scenes/player.gd" id="1_3vyb7"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://jtjxwk1570gg" path="res://graphics/alle movement.png" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://v6aeey70u727" path="res://graphics/Ijs achtergrond.png" id="2_qhqgy"]
 
@@ -102,7 +102,7 @@ radius = 21.0
 height = 64.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1556671523]
-script = ExtResource("1_3vyb7")
+script = ExtResource("1_qhqgy")
 jump_power = 9.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=139139626]
