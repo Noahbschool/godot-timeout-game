@@ -1,46 +1,29 @@
 extends Control
 
-@onready var vbox = $VBoxContainer
-
 func _ready():
-	# Hide pause menu initially
-	visible = false
+	$AnimationPlayer.play("RESET")
 
-	# Setup buttons
-	for button in vbox.get_children():
-		if button is Button:
-			# Make text black
-			button.add_theme_color_override("font_color", Color(0,0,0,1))
+func resume():
+	get_tree().paused = false
+	$AnimationPlayer.play_backwards("blur")
+	
+func pause():
+	get_tree().paused = true
+	$AnimationPlayer.play("blur")
+	
+func testEsc():
+	if Input.is_action_just_pressed("esc") and get_tree().paused == false:
+		pause()
+	elif Input.is_action_just_pressed("esc") and get_tree().paused == true:
+		resume()
 
-			# Create white background
-			var style = StyleBoxFlat.new()
-			style.bg_color = Color(1,1,1,1) # white
-			style.corner_radius_top_left = 5
-			style.corner_radius_top_right = 5
-			style.corner_radius_bottom_left = 5
-			style.corner_radius_bottom_right = 5
+func _on_main_menu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
-			# Apply background to all states
-			button.add_theme_style_override("normal", style)
-			button.add_theme_style_override("hover", style)
-			button.add_theme_style_override("pressed", style)
 
-			# Connect buttons
-			if button.text == "Resume":
-				button.pressed.connect(self, "_on_resume_pressed")
-			elif button.text == "Quit":
-				button.pressed.connect(self, "_on_quit_pressed")
+func _on_resume_pressed() -> void:
+	resume()
 
 func _process(delta):
-	# Toggle pause menu with ESC
-	if Input.is_action_just_pressed("ui_cancel"):
-		visible = not visible
-		get_tree().paused = visible
-
-# Button callbacks
-func _on_resume_pressed():
-	visible = false
-	get_tree().paused = false
-
-func _on_quit_pressed():
-	get_tree().quit()
+	testEsc()
