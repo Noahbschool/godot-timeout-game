@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b3qdn1nqan5yd" path="res://scenes/player.tscn" id="1_sn7cj"]
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="2_63ct5"]
+[ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="3_5tayq"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="3_63ct5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
@@ -84,6 +85,23 @@ texture_region_size = Vector2i(1, 4)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_5tayq")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6gv3"]
+texture = ExtResource("3_5tayq")
+texture_region_size = Vector2i(3, 3)
+0:0/size_in_atlas = Vector2i(26, 29)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-38.55432, -42.218575, 37.59842, -43.17447, 28.95726, 31.025627, -2.549057, 40.306793, -33.453728, 31.20549)
+38:25/size_in_atlas = Vector2i(45, 12)
+38:25/0 = 0
+38:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-67.80674, -17.716087, 67.44702, -18.255663, 67.267166, 17.716084, -67.44702, 17.176506)
+33:38/size_in_atlas = Vector2i(19, 25)
+33:38/0 = 0
+33:38/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.367142, 15.917496, -19.424744, -13.039759, -10.07209, -36.421394, 6.834633, -15.9175, 9.892227, 12.500179, 21.942764, -1.528801, 26.79895, 17.536224, 20.863617, 34.98252, -18.345589, 37.86026, -25.360085, 24.190998, -25.719795, 11.241169)
+
+[sub_resource type="TileSet" id="TileSet_vsfy4"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_c6gv3")
+
 [node name="LevelOne" type="Node2D" unique_id=119961034]
 
 [node name="Player" parent="." unique_id=1556671523 instance=ExtResource("1_sn7cj")]
@@ -92,7 +110,12 @@ position = Vector2(246, 740)
 [node name="TileMap" type="TileMap" parent="." unique_id=927417781]
 tile_set = SubResource("TileSet_c6gv3")
 format = 2
-layer_0/tile_data = PackedInt32Array(4456450, 1245185, 0, 4456451, 1245185, 0, 4456452, 1245185, 0, 4456453, 1245185, 0, 4456454, 1245185, 0, 4456455, 1245185, 0, 4456456, 1245185, 0, 4456457, 1245185, 0, 4456458, 1245185, 0, 4456459, 1245185, 0, 4456460, 1245185, 0, 4456461, 1245185, 0, 4456462, 1245185, 0, 4456463, 1245185, 0, 4456464, 1245185, 0, 4456465, 1245185, 0, 4456466, 1245185, 0, 4456467, 1245185, 0, 4456468, 1245185, 0, 4456469, 1245185, 0, 4456470, 1245185, 0, 4456471, 1245185, 0, 4456472, 1245185, 0, 4456473, 1245185, 0, 4456474, 1245185, 0, 4456475, 1245185, 0, 4456476, 1245185, 0, 4456477, 1245185, 0, 4456479, 5505025, 0, 4456448, 1, 0)
+layer_0/tile_data = PackedInt32Array(4456450, 1245185, 20, 4456451, 1245185, 20, 4456452, 1245185, 20, 4456453, 1245185, 20, 4456454, 1245185, 20, 4456455, 1245185, 20, 4456456, 1245185, 20, 4456457, 1245185, 20, 4456458, 1245185, 20, 4456459, 1245185, 20, 4456460, 1245185, 20, 4456461, 1245185, 20, 4456462, 1245185, 20, 4456463, 1245185, 20, 4456464, 1245185, 20, 4456465, 1245185, 20, 4456466, 1245185, 20, 4456467, 1245185, 20, 4456468, 1245185, 20, 4456469, 1245185, 20, 4456470, 1245185, 20, 4456471, 1245185, 20, 4456472, 1245185, 20, 4456473, 1245185, 20, 4456474, 1245185, 20, 4456475, 1245185, 20, 4456476, 1245185, 20, 4456477, 1245185, 20, 4456479, 5308417, 20, 4456448, 1, 20, 4456449, 1, 20)
+
+[node name="TileMap2" type="TileMap" parent="." unique_id=1046566493]
+tile_set = SubResource("TileSet_vsfy4")
+format = 2
+layer_0/tile_data = PackedInt32Array(4325396, 0, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1532090044]
 
