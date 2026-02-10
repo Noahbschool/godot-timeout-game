@@ -187,7 +187,6 @@ texture_region_size = Vector2i(1, 4)
 101:29/size_in_atlas = Vector2i(54, 18)
 101:29/0 = 0
 101:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-19.756584, -13.547375, -9.596054, -36.126328, 6.7736893, -18.62764, 9.558922, 11.470707, 22.941416, -1.2745228, 25.171831, 20.710999, 20.073736, 35.686646, -22.578953, 36.690804, -26.53027, 25.401321, -27.659218, 11.8539505, -16.934216, 15.240791)
-91:8/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_bhu28"]
 physics_layer_0/collision_layer = 1
