@@ -59,6 +59,7 @@ func update_animations(direction):
 		new_anim = "idle"
 
 	if animation_player.current_animation != new_anim:
+<<<<<<< HEAD
 		if new_anim == "move":
 			animation_player.play(new_anim, -1.0, 2.5) # 1.5 = 150% speed
 		else:
@@ -70,3 +71,6 @@ func update_animations(direction):
 >>>>>>> parent of a332ed9 (reverted changed)
 =======
 >>>>>>> parent of c68f4dd (things gone)
+=======
+		animation_player.play(new_anim)
+>>>>>>> parent of 99a8f76 (Merge branch 'main' of https://github.com/Noahbschool/godot-timeout-game)
