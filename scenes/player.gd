@@ -60,6 +60,7 @@ func update_animations(direction):
 
 	if animation_player.current_animation != new_anim:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if new_anim == "move":
 			animation_player.play(new_anim, -1.0, 2.5) # 1.5 = 150% speed
 		else:
@@ -74,3 +75,6 @@ func update_animations(direction):
 =======
 		animation_player.play(new_anim)
 >>>>>>> parent of 99a8f76 (Merge branch 'main' of https://github.com/Noahbschool/godot-timeout-game)
+=======
+		animation_player.play(new_anim)
+>>>>>>> parent of 91ee055 (added obstacles)
