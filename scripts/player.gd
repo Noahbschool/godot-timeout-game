@@ -6,24 +6,18 @@ extends CharacterBody2D
 var speed_multiplier: float = 30.0
 var jump_multiplier: float = -40.0
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 var can_control: bool = true
 >>>>>>> parent of a332ed9 (reverted changed)
-=======
->>>>>>> parent of c68f4dd (things gone)
 
 @onready var animation_player = $Node2D/AnimationPlayer
 @onready var sprite = $Node2D/Sprite2D
 
 func _physics_process(delta: float) -> void:
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 	if not can_control: return
 >>>>>>> parent of a332ed9 (reverted changed)
-=======
->>>>>>> parent of c68f4dd (things gone)
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -64,9 +58,6 @@ func update_animations(direction):
 		else:
 			animation_player.play(new_anim)
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 	
 >>>>>>> parent of a332ed9 (reverted changed)
-=======
->>>>>>> parent of c68f4dd (things gone)
