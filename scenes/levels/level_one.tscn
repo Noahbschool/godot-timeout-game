@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="3_5tayq"]
 [ext_resource type="Texture2D" uid="uid://byuwy7tu4ww2o" path="res://graphics/tiles.png" id="3_843q2"]
 [ext_resource type="Texture2D" uid="uid://bo68s8d8321fg" path="res://graphics/tiles (2) (1).png" id="3_c6gv3"]
+[ext_resource type="Script" uid="uid://uixh7bolw2cb" path="res://scripts/area_2d.gd" id="4_5tayq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5rfim"]
 texture = ExtResource("3_843q2")
@@ -263,3 +264,10 @@ layer_0/tile_data = PackedInt32Array(4063245, 0, 0, 3932180, 0, 0, 3276842, 7471
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1708487006]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("3_5rfim")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1025769881]
+script = ExtResource("4_5tayq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2109265209]
+position = Vector2(-536, 1479.5)
+shape = SubResource("RectangleShape2D_c6gv3")
