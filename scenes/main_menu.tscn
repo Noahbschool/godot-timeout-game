@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 [gd_scene format=3 uid="uid://b0cxgis1rt8ad"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_wu84c"]
@@ -7,18 +6,13 @@
 [ext_resource type="Shader" path="res://shaders/menu_background.gdshader" id="3_wu84c"]
 [ext_resource type="Texture2D" path="res://graphics/logo time out 1.png" id="4_oa1go"]
 =======
-=======
->>>>>>> parent of a332ed9 (reverted changed)
 [gd_scene format=3 uid="uid://dyhu24em1yao3"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="Shader" uid="uid://c1qgp11fu5oly" path="res://shaders/pause_menu_blur.gdshader" id="2_8ln24"]
 [ext_resource type="Shader" uid="uid://cgi34m86jc0ia" path="res://shaders/menu_background.gdshader" id="3_wu84c"]
 [ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="4_oa1go"]
-<<<<<<< HEAD
 >>>>>>> parent of 2660556 (Merge branch 'main' of https://github.com/Noahbschool/godot-timeout-game)
-=======
->>>>>>> parent of a332ed9 (reverted changed)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbmy8"]
 shader = ExtResource("2_8ln24")

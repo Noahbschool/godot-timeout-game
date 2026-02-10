@@ -1,11 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 [gd_scene format=3 uid="uid://bmyk2gmj5l45w"]
 =======
 [gd_scene format=3 uid="uid://cmenmt4w3s1nw"]
 >>>>>>> parent of 2660556 (Merge branch 'main' of https://github.com/Noahbschool/godot-timeout-game)
-=======
-[gd_scene format=3 uid="uid://cmenmt4w3s1nw"]
->>>>>>> parent of a332ed9 (reverted changed)
 
 [node name="Level three" type="Node2D" unique_id=891425400]

@@ -5,11 +5,13 @@ extends CharacterBody2D
 
 var speed_multiplier: float = 30.0
 var jump_multiplier: float = -40.0
+var can_control: bool = true
 
 @onready var animation_player = $Node2D/AnimationPlayer
 @onready var sprite = $Node2D/Sprite2D
 
 func _physics_process(delta: float) -> void:
+	if not can_control: return
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -49,3 +51,4 @@ func update_animations(direction):
 			animation_player.play(new_anim, -1.0, 2.5) # 1.5 = 150% speed
 		else:
 			animation_player.play(new_anim)
+	
