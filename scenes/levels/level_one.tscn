@@ -5,9 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dtt15xw4twsuw" path="res://graphics/level ijs cartoon versie.png" id="2_w53h0"]
 [ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="3_5tayq"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="3_63ct5"]
-[ext_resource type="PackedScene" path="res://scenes/death_zone.tscn" id="4_5tayq"]
+[ext_resource type="PackedScene" uid="uid://dpa0wpf86ryqe" path="res://scenes/death_zone.tscn" id="4_5tayq"]
 [ext_resource type="Script" uid="uid://px5gdgive7i" path="res://scripts/camera.gd" id="5_c6gv3"]
-[ext_resource type="Texture2D" uid="uid://v6aeey70u727" path="res://graphics/Ijs achtergrond.png" id="6_vsfy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("2_63ct5")
@@ -120,7 +119,7 @@ zoom = Vector2(1.5, 1.5)
 [node name="Sprite2D" type="Sprite2D" parent="Camera/Camera2D" unique_id=1164158154]
 position = Vector2(1.9788742e-05, -2.3841858e-06)
 scale = Vector2(0.16000001, 0.16000001)
-texture = ExtResource("6_vsfy4")
+texture = ExtResource("2_w53h0")
 
 [node name="Player" parent="." unique_id=1556671523 instance=ExtResource("1_sn7cj")]
 position = Vector2(102, 1005)
