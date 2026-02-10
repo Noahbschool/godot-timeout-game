@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbxukcl1l5ve4"
-path="res://.godot/imported/push and jump.png-6716b13e2970aa43c55f4130db73c54c.ctex"
+uid="uid://s3h53buf6k6u"
+path="res://.godot/imported/level kristallen cartoon.png-4e4c614c5df5298d752c5740444f3707.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/push and jump.png"
-dest_files=["res://.godot/imported/push and jump.png-6716b13e2970aa43c55f4130db73c54c.ctex"]
+source_file="res://graphics/level kristallen cartoon.png"
+dest_files=["res://.godot/imported/level kristallen cartoon.png-4e4c614c5df5298d752c5740444f3707.ctex"]
 
 [params]
 

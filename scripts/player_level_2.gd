@@ -78,4 +78,4 @@ func camera(_delta: float) -> void:
 		die()
 
 func die() -> void:
-	get_tree().change_scene_to_file("res://scenes/death_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/death_menu_level_2.tscn")

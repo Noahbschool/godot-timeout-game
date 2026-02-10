@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v6aeey70u727"
-path="res://.godot/imported/Ijs achtergrond.png-7d5a3c640bf09b482093be9272a629ab.ctex"
+uid="uid://bbbum3ds0mgvi"
+path="res://.godot/imported/lava level achtergrond.png-6e6e569204fa7411cfb89d5fd9594480.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Ijs achtergrond.png"
-dest_files=["res://.godot/imported/Ijs achtergrond.png-7d5a3c640bf09b482093be9272a629ab.ctex"]
+source_file="res://graphics/lava level achtergrond.png"
+dest_files=["res://.godot/imported/lava level achtergrond.png-6e6e569204fa7411cfb89d5fd9594480.ctex"]
 
 [params]
 
