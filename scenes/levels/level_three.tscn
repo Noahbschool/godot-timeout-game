@@ -1,3 +1,142 @@
 [gd_scene format=3 uid="uid://cmenmt4w3s1nw"]
 
-[node name="Level three" type="Node2D" unique_id=891425400]
+[ext_resource type="Script" path="res://scripts/camera.gd" id="1_7ry6i"]
+[ext_resource type="Texture2D" uid="uid://bbbum3ds0mgvi" path="res://graphics/lava level achtergrond.png" id="2_vmov0"]
+[ext_resource type="PackedScene" uid="uid://b3qdn1nqan5yd" path="res://scenes/player.tscn" id="3_7s1bx"]
+[ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="4_jbu4w"]
+[ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="5_s458d"]
+[ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="6_31lil"]
+[ext_resource type="PackedScene" uid="uid://dpa0wpf86ryqe" path="res://scenes/death_zone.tscn" id="7_4pegr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
+texture = ExtResource("4_jbu4w")
+texture_region_size = Vector2i(1, 4)
+108:0/size_in_atlas = Vector2i(33, 17)
+108:0/0 = 0
+108:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.452757, -32.644356, 16.626858, -32.644356, 15.930447, 34.38539, -16.800962, 34.037186)
+109:20/size_in_atlas = Vector2i(33, 17)
+109:20/0 = 0
+109:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.756342, -33.514874, 17.14917, -33.514874, 17.67148, 34.21129, -16.452757, 33.863083)
+111:40/size_in_atlas = Vector2i(35, 18)
+111:40/0 = 0
+111:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.930449, -35.95232, 16.800962, -35.255905, 17.845583, 33.34077, -16.800964, 32.992565)
+148:63/size_in_atlas = Vector2i(28, 9)
+148:63/0 = 0
+148:63/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.493001, -16.975065, 14.189415, -16.452755, 13.667107, 17.323273, -13.144794, 17.671478)
+149:75/size_in_atlas = Vector2i(28, 9)
+149:75/0 = 0
+149:75/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.8412075, -18.367893, 14.189415, -18.019686, 14.189415, 16.800964, -13.144794, 17.497377)
+148:87/size_in_atlas = Vector2i(28, 9)
+148:87/0 = 0
+148:87/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.015311, -16.62686, 13.667107, -16.975065, 13.841209, 18.716099, -13.8412075, 17.845585)
+0:0/size_in_atlas = Vector2i(19, 17)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.269905, -34.21129, 9.314524, -33.86308, 9.140421, 34.559494, -7.9216976, 33.68898)
+84:0/size_in_atlas = Vector2i(20, 17)
+84:0/0 = 0
+84:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.010937, -34.21129, 9.488628, -33.514874, 9.4886265, 34.037186, -9.4886265, 34.037186)
+0:20/size_in_atlas = Vector2i(19, 17)
+0:20/0 = 0
+0:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.9216976, -34.21129, 9.662729, -33.68898, 10.1850395, 34.559494, -6.7029753, 33.166668)
+81:20/size_in_atlas = Vector2i(21, 17)
+81:20/0 = 0
+81:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.70735, -33.688976, 9.836834, -33.16667, 11.403763, 34.38539, -10.359142, 34.21129)
+19:20/size_in_atlas = Vector2i(62, 17)
+19:20/0 = 0
+19:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-30.903324, -34.037186, 31.251532, -33.340775, 31.599737, 34.037186, -30.903324, 34.559494)
+19:0/size_in_atlas = Vector2i(65, 17)
+19:0/0 = 0
+19:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.166664, -34.037186, 32.644356, -33.34077, 33.166668, 33.340775, -32.29615, 34.559494)
+1:40/size_in_atlas = Vector2i(19, 18)
+1:40/0 = 0
+1:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.269904, -36.822834, 9.662729, -36.126423, 9.4886265, 33.166664, -7.57349, 32.644356)
+80:40/size_in_atlas = Vector2i(25, 17)
+80:40/0 = 0
+80:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.622484, -34.037186, 11.926072, -33.514874, 10.881452, 34.38539, -12.796589, 34.037186)
+20:40/size_in_atlas = Vector2i(60, 17)
+20:40/0 = 0
+20:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-30.380802, -34.082016, 30.380806, -33.15671, 29.858706, 33.68898, -29.455498, 35.00732)
+0:64/size_in_atlas = Vector2i(17, 9)
+0:64/0 = 0
+0:64/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.0958, -17.845583, 8.792215, -18.367893, 7.747595, 16.800964, -6.7029753, 16.626862)
+122:64/size_in_atlas = Vector2i(16, 9)
+122:64/0 = 0
+122:64/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.618111, -17.845581, 7.57349, -18.019684, 7.747595, 17.323273, -8.095802, 17.497375)
+17:64/size_in_atlas = Vector2i(105, 9)
+17:64/0 = 0
+17:64/0/physics_layer_0/polygon_0/points = PackedVector2Array(-53.014435, -18.193789, 52.840336, -17.67148, 52.66623, 18.019688, -52.666237, 17.497375)
+2:75/size_in_atlas = Vector2i(20, 9)
+2:75/0 = 0
+2:75/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.444007, -18.716099, 10.1850395, -18.367891, 10.707348, 16.626862, -7.3993874, 16.278652)
+124:74/size_in_atlas = Vector2i(18, 10)
+124:74/0 = 0
+124:74/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.836834, -16.975067, 8.269905, -16.626862, 6.877079, 17.845583, -9.314522, 18.193789)
+22:75/size_in_atlas = Vector2i(102, 9)
+22:75/0 = 0
+22:75/0/physics_layer_0/polygon_0/points = PackedVector2Array(-51.099297, -17.845583, 50.9252, -17.845583, 50.73748, 14.959074, -51.35435, 17.73499)
+1:87/size_in_atlas = Vector2i(16, 9)
+1:87/0 = 0
+1:87/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.747595, -16.62686, 7.9216976, -16.975067, 7.57349, 18.541996, -7.051182, 17.845583)
+122:87/size_in_atlas = Vector2i(16, 9)
+122:87/0 = 0
+122:87/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.9216976, -17.497375, 7.573492, -17.497375, 7.747595, 17.845585, -8.618111, 17.671478)
+17:87/size_in_atlas = Vector2i(105, 9)
+17:87/0 = 0
+17:87/0/physics_layer_0/polygon_0/points = PackedVector2Array(-53.821823, -16.809683, 53.014435, -17.67148, 52.492126, 18.716099, -51.97122, 19.277157)
+
+[sub_resource type="TileSet" id="TileSet_c6gv3"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_5tayq")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6gv3"]
+texture = ExtResource("5_s458d")
+texture_region_size = Vector2i(3, 3)
+0:0/size_in_atlas = Vector2i(26, 29)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-38.55432, -42.218575, 37.59842, -43.17447, 28.95726, 31.025627, -2.549057, 40.306793, -33.453728, 31.20549)
+38:25/size_in_atlas = Vector2i(45, 12)
+38:25/0 = 0
+38:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-67.80674, -17.716087, 67.44702, -18.255663, 67.267166, 17.716084, -67.44702, 17.176506)
+33:38/size_in_atlas = Vector2i(19, 25)
+33:38/0 = 0
+33:38/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.367142, 15.917496, -19.424744, -13.039759, -10.07209, -36.421394, 6.834633, -15.9175, 9.892227, 12.500179, 21.942764, -1.528801, 26.79895, 17.536224, 20.863617, 34.98252, -18.345589, 37.86026, -25.360085, 24.190998, -25.719795, 11.241169)
+
+[sub_resource type="TileSet" id="TileSet_vsfy4"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_c6gv3")
+
+[node name="LevelThree" type="Node2D" unique_id=119961034]
+
+[node name="Camera" type="Node2D" parent="." unique_id=2104836778]
+script = ExtResource("1_7ry6i")
+scroll_speed = 100.0
+
+[node name="Camera2D" type="Camera2D" parent="Camera" unique_id=1652106884]
+position = Vector2(46, 1029)
+zoom = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera/Camera2D" unique_id=1164158154]
+position = Vector2(0, 3.0517578e-05)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_vmov0")
+
+[node name="Player" parent="." unique_id=1556671523 instance=ExtResource("3_7s1bx")]
+position = Vector2(102, 1005)
+speed = 7.0
+
+[node name="TileMap" type="TileMap" parent="." unique_id=927417781]
+tile_set = SubResource("TileSet_c6gv3")
+format = 2
+layer_0/tile_data = PackedInt32Array(4456450, 1245185, 20, 4456451, 1245185, 20, 4456452, 1245185, 20, 4456453, 1245185, 20, 4456454, 1245185, 20, 4456455, 1245185, 20, 4456456, 1245185, 20, 4456457, 1245185, 20, 4456458, 1245185, 20, 4456459, 1245185, 20, 4456460, 1245185, 20, 4456461, 1245185, 20, 4456462, 1245185, 20, 4456463, 1245185, 20, 4456464, 1245185, 20, 4456465, 1245185, 20, 4456466, 1245185, 20, 4456467, 1245185, 20, 4456468, 1245185, 20, 4456469, 1245185, 20, 4456470, 1245185, 20, 4456471, 1245185, 20, 4456472, 1245185, 20, 4456473, 1245185, 20, 4456474, 1245185, 20, 4456475, 1245185, 20, 4456476, 1245185, 20, 4456477, 1245185, 20, 4456479, 1245185, 20, 4456448, 1, 20, 4456449, 1, 20, 4456481, 1245185, 20, 4456482, 1245185, 20, 4456483, 1245185, 20, 4456484, 1245185, 20, 4456485, 1245185, 20, 4456480, 1245185, 20, 4456478, 1245185, 20, 4456486, 1245185, 20, 4456487, 1245185, 20, 4456488, 1245185, 20, 4456489, 1245185, 20, 4456490, 1245185, 20, 4456491, 1245185, 20, 4456492, 1245185, 20, 4456493, 1245185, 20, 4456494, 1245185, 20, 4456495, 1245185, 20, 4456496, 1245185, 20, 4456497, 1245185, 20, 4456498, 1245185, 20, 4456499, 1245185, 20, 4456500, 1245185, 20, 4456501, 1245185, 20, 4456502, 1245185, 20, 4456503, 1245185, 20, 4456504, 1245185, 20, 4456505, 1245185, 20, 4456506, 1245185, 20, 4456507, 1245185, 20, 4456508, 1245185, 20, 4456509, 1245185, 20, 4456510, 1245185, 20, 4456511, 1245185, 20, 4456512, 1245185, 20, 4456513, 1245185, 20, 4456514, 1245185, 20, 4456515, 1245185, 20, 4390982, 1245185, 20, 4456517, 5308417, 20, 4194365, 7143425, 20, 4194361, 7143425, 20, 4390986, 1245185, 20, 4390990, 1245185, 20, 4390983, 1245185, 20, 4390984, 1245185, 20, 4390985, 1245185, 20, 4390987, 1245185, 20, 4390988, 1245185, 20, 4390989, 1245185, 20, 4325455, 1245185, 20, 4325456, 1245185, 20, 4390992, 1245185, 20, 4390991, 1245185, 20, 4456516, 5308417, 20, 4259909, 1245185, 20, 4259912, 1245185, 20, 4194369, 1245185, 20, 4194371, 1245185, 20, 4390981, 5308417, 20, 4522053, 5308417, 20, 4522052, 5308417, 20, 4522051, 5308417, 20, 4522050, 5308417, 20, 4522049, 5308417, 20)
+
+[node name="TileMap2" type="TileMap" parent="." unique_id=1046566493]
+tile_set = SubResource("TileSet_vsfy4")
+format = 2
+layer_0/tile_data = PackedInt32Array(4325396, 0, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1532090044]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("6_31lil")]
+
+[node name="DeathZone" parent="." unique_id=1150798076 instance=ExtResource("7_4pegr")]
+position = Vector2(344, 1144)

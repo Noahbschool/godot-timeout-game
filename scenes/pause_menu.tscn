@@ -28,17 +28,65 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="Animation" id="Animation_v4r4p"]
-length = 0.3
+[sub_resource type="Animation" id="Animation_5d2l8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
-[sub_resource type="Animation" id="Animation_1s2dm"]
+[sub_resource type="Animation" id="Animation_7l7mv"]
 resource_name = "blur"
 length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.800000038]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_88e76"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v4r4p"]
 _data = {
-&"RESET": SubResource("Animation_v4r4p"),
-&"blur": SubResource("Animation_1s2dm")
+&"RESET": SubResource("Animation_5d2l8"),
+&"blur": SubResource("Animation_7l7mv")
 }
 
 [node name="PauseMenu" type="Control" unique_id=2089087006]
@@ -101,8 +149,8 @@ position = Vector2(200, 100)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_kukqi")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1596180787]
-libraries/ = SubResource("AnimationLibrary_88e76")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1443048269]
+libraries/ = SubResource("AnimationLibrary_v4r4p")
 
 [connection signal="pressed" from="PanelContainer/Control/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="PanelContainer/Control/Resume" to="." method="_on_resume_pressed"]

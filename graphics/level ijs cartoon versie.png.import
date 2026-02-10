@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckbxsjdx4b4gx"
-path="res://.godot/imported/idle.png-97f0e8058821f2a96e166b73466d014c.ctex"
+uid="uid://dtt15xw4twsuw"
+path="res://.godot/imported/level ijs cartoon versie.png-59148a33fd1b63fd83bd7e9b084e9900.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/idle.png"
-dest_files=["res://.godot/imported/idle.png-97f0e8058821f2a96e166b73466d014c.ctex"]
+source_file="res://graphics/level ijs cartoon versie.png"
+dest_files=["res://.godot/imported/level ijs cartoon versie.png-59148a33fd1b63fd83bd7e9b084e9900.ctex"]
 
 [params]
 
