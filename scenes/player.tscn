@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://jtjxwk1570gg" path="res://graphics/alle movement.png" id="2_g2els"]
-[ext_resource type="Texture2D" uid="uid://v6aeey70u727" path="res://graphics/Ijs achtergrond.png" id="2_qhqgy"]
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 length = 0.001
@@ -106,12 +105,12 @@ script = ExtResource("1_3vyb7")
 jump_power = 9.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=139139626]
+enabled = false
 zoom = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=1134647137]
 position = Vector2(4.579127e-05, 1.0000033)
 scale = Vector2(0.080000006, 0.08044445)
-texture = ExtResource("2_qhqgy")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1686377587]
 

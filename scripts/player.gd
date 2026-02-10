@@ -14,6 +14,8 @@ func _physics_process(delta: float) -> void:
 	if not can_control:
 		return
 
+	camera(delta)
+
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -52,3 +54,33 @@ func update_animations(direction):
 			animation_player.play(new_anim, -1.0, 2.5)
 		else:
 			animation_player.play(new_anim)
+			
+@export var screen_margin := 8.0
+
+func camera(_delta: float) -> void:
+	var cam: Camera2D = get_viewport().get_camera_2d()
+	if cam == null or not cam.enabled:
+		# Helpful debug (optional):
+		# print("No enabled Camera2D found")
+		return
+
+	var vp_size: Vector2 = get_viewport_rect().size
+
+	# ✅ divide by zoom (zoom in => smaller visible area)
+	var half_world: Vector2 = (vp_size * 0.5) / cam.zoom
+
+	var screen_rect: Rect2 = Rect2(
+		cam.global_position - half_world,
+		half_world * 2.0
+	).grow(-screen_margin)
+
+	if not screen_rect.has_point(global_position):
+		print("OFFSCREEN")
+		die()
+
+func die() -> void:
+	can_control = false
+	velocity = Vector2.ZERO
+
+	# Simple respawn (choose ONE)
+	get_tree().reload_current_scene()
