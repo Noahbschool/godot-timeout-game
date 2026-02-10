@@ -141,6 +141,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_1xbon")
 text = "Main menu"
 
 [node name="NextLevel" type="Button" parent="PanelContainer/Control" unique_id=370356727]
+process_mode = 3
 layout_mode = 0
 offset_left = 80.0
 offset_top = 294.0

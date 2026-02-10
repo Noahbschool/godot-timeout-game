@@ -101,7 +101,7 @@ _data = {
 radius = 21.0
 height = 64.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1556671523]
+[node name="Player" type="CharacterBody2D" unique_id=1556671523 groups=["Player"]]
 script = ExtResource("1_3vyb7")
 jump_power = 9.0
 

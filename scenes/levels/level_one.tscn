@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b3qdn1nqan5yd" path="res://scenes/player.tscn" id="1_sn7cj"]
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="2_63ct5"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="3_63ct5"]
+[ext_resource type="PackedScene" uid="uid://dpa0wpf86ryqe" path="res://scenes/death_zone.tscn" id="4_5tayq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("2_63ct5")
@@ -97,3 +98,6 @@ layer_0/tile_data = PackedInt32Array(4456450, 1245185, 0, 4456451, 1245185, 0, 4
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1532090044]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("3_63ct5")]
+
+[node name="DeathZone" parent="." unique_id=1150798076 instance=ExtResource("4_5tayq")]
+position = Vector2(344, 1144)
