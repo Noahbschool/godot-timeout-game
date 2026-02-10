@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="3_5rfim"]
 [ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="3_5tayq"]
 [ext_resource type="Texture2D" uid="uid://byuwy7tu4ww2o" path="res://graphics/tiles.png" id="3_843q2"]
-[ext_resource type="Texture2D" uid="uid://bo68s8d8321fg" path="res://graphics/tiles (2) (1).png" id="3_c6gv3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5rfim"]
 texture = ExtResource("3_843q2")
@@ -163,59 +162,6 @@ texture_region_size = Vector2i(1, 4)
 186:18/0/terrain_set = 0
 186:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.909506, -8, 5.0759296, -8, 5.1314044, 8, -5.0759296, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsfy4"]
-texture = ExtResource("3_c6gv3")
-texture_region_size = Vector2i(1, 4)
-1:0/size_in_atlas = Vector2i(22, 15)
-1:0/0 = 0
-70:0/size_in_atlas = Vector2i(17, 15)
-70:0/0 = 0
-23:0/size_in_atlas = Vector2i(47, 15)
-23:0/0 = 0
-92:3/size_in_atlas = Vector2i(24, 10)
-92:3/0 = 0
-66:16/size_in_atlas = Vector2i(21, 15)
-66:16/0 = 0
-23:16/size_in_atlas = Vector2i(42, 15)
-23:16/0 = 0
-93:20/size_in_atlas = Vector2i(24, 9)
-93:20/0 = 0
-1:16/size_in_atlas = Vector2i(22, 15)
-1:16/0 = 0
-1:33/size_in_atlas = Vector2i(20, 15)
-1:33/0 = 0
-66:33/size_in_atlas = Vector2i(21, 15)
-66:33/0 = 0
-21:33/size_in_atlas = Vector2i(45, 15)
-21:33/0 = 0
-95:36/size_in_atlas = Vector2i(24, 10)
-95:36/0 = 0
-0:53/size_in_atlas = Vector2i(29, 8)
-0:53/0 = 0
-29:53/size_in_atlas = Vector2i(55, 8)
-29:53/0 = 0
-84:53/size_in_atlas = Vector2i(32, 8)
-84:53/0 = 0
-124:53/size_in_atlas = Vector2i(23, 7)
-124:53/0 = 0
-1:62/size_in_atlas = Vector2i(30, 8)
-1:62/0 = 0
-31:62/size_in_atlas = Vector2i(57, 8)
-31:62/0 = 0
-88:62/size_in_atlas = Vector2i(30, 8)
-88:62/0 = 0
-125:62/size_in_atlas = Vector2i(25, 8)
-125:62/0 = 0
-0:72/size_in_atlas = Vector2i(32, 8)
-0:72/0 = 0
-32:72/size_in_atlas = Vector2i(54, 8)
-32:72/0 = 0
-86:72/size_in_atlas = Vector2i(30, 8)
-86:72/0 = 0
-124:72/size_in_atlas = Vector2i(24, 8)
-124:72/0 = 0
-161:72/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_r4wdr"]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
@@ -226,7 +172,6 @@ terrain_set_0/terrain_1/color = Color(3.080368e-06, 0.48092556, 0.66901886, 1)
 terrain_set_0/terrain_2/name = "crystal ground"
 terrain_set_0/terrain_2/color = Color(0.574836, 0.37623766, 0.71102124, 1)
 sources/0 = SubResource("TileSetAtlasSource_5rfim")
-sources/1 = SubResource("TileSetAtlasSource_vsfy4")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6gv3"]
 texture = ExtResource("3_5tayq")
