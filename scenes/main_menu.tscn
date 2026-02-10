@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dyhu24em1yao3"]
+
+[ext_resource type="Script" uid="uid://dmpbp5jqif8sj" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://shaders/new_shader.gdshader" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="2_bqqt6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wu84c"]
+shader = ExtResource("1_ekxnf")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="Theme" id="Theme_rtw2f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1go"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="MainMenu" type="Control" unique_id=532443023]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2080883248]
+modulate = Color(0.9830678, 0, 0.3550994, 1)
+self_modulate = Color(0.9999998, 0.09660096, 0.7116718, 1)
+material = SubResource("ShaderMaterial_wu84c")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 750.0
+offset_top = 250.0
+offset_right = -770.0
+offset_bottom = -430.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7472146, 4.7168137e-06, 0.47576022, 1)
+
+[node name="Control" type="Control" parent="." unique_id=787430467]
+anchors_preset = 0
+offset_right = 127.0
+offset_bottom = 76.0
+
+[node name="Quit" type="Button" parent="Control" unique_id=1130909697]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 570.0
+offset_right = 1080.0
+offset_bottom = 595.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
+text = "Quit"
+
+[node name="Levels" type="Button" parent="Control" unique_id=1191913527]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 520.0
+offset_right = 1080.0
+offset_bottom = 545.0
+theme = SubResource("Theme_rtw2f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_oa1go")
+text = "Levels
+"
+
+[node name="LogoTimeOut1" type="Sprite2D" parent="." unique_id=1781909163]
+position = Vector2(950, 350)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_bqqt6")
+
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/Levels" to="." method="_on_levels_pressed"]
