@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://jhhtbyg0cos0"]
+[gd_scene format=3 uid="uid://bfm3n0ehu7ybj"]
 
 [ext_resource type="PackedScene" uid="uid://b3qdn1nqan5yd" path="res://scenes/player.tscn" id="2_t18mc"]
-[ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="3_5rfim"]
+[ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="3_5rfim"]
 [ext_resource type="Texture2D" uid="uid://byuwy7tu4ww2o" path="res://graphics/tiles.png" id="3_843q2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5rfim"]
@@ -224,7 +224,10 @@ layer_0/tile_data = PackedInt32Array(4063234, 9699328, 8, 4063235, 9699328, 8, 4
 tile_set = SubResource("TileSet_bhu28")
 format = 2
 layer_0/tile_data = PackedInt32Array(3932186, 7471105, 18, 3866663, 6684673, 29, 4063246, 1, 0)
+<<<<<<< HEAD
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1708487006]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("3_5rfim")]
 >>>>>>> parent of c837717 (fixed collision on obstacles)
+=======
+>>>>>>> parent of dad52dd (Merge branch 'main' of https://github.com/Noahbschool/godot-timeout-game)
