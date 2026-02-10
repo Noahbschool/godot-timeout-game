@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://d3xua0pryetgs"]
 
-<<<<<<< HEAD
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_5d2l8"]
 [ext_resource type="Shader" uid="uid://c1qgp11fu5oly" path="res://shaders/pause_menu_blur.gdshader" id="2_5d2l8"]
 [ext_resource type="Shader" uid="uid://cgi34m86jc0ia" path="res://shaders/menu_background.gdshader" id="3_7l7mv"]
@@ -9,67 +8,120 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7l7mv"]
 shader = ExtResource("2_5d2l8")
 shader_parameter/lod = 0.0
-=======
-[ext_resource type="Script" uid="uid://cutyyuj8r02r0" path="res://pause_menu.gd" id="1_myx47"]
-[ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://new_shader.gdshader" id="2_kukqi"]
->>>>>>> parent of eb24795 (added working menus)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ypfif"]
-shader = ExtResource("2_kukqi")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_el1ct"]
+shader = ExtResource("3_7l7mv")
 
 [sub_resource type="Theme" id="Theme_rks53"]
 
-[sub_resource type="Theme" id="Theme_3wosw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l7mv"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d2l8"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_v4r4p"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_1s2dm"]
+resource_name = "blur"
+length = 0.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0.8, -0.050000004, -0.13333334, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_88e76"]
+_data = {
+&"RESET": SubResource("Animation_v4r4p"),
+&"blur": SubResource("Animation_1s2dm")
+}
 
 [node name="PauseMenu" type="Control" unique_id=2089087006]
-<<<<<<< HEAD
 process_mode = 3
 visible = false
-=======
->>>>>>> parent of eb24795 (added working menus)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_myx47")
+script = ExtResource("1_5d2l8")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1511709814]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=809678806]
+material = SubResource("ShaderMaterial_7l7mv")
+layout_mode = 0
+offset_right = 1917.0
+offset_bottom = 1090.0
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=170677244]
+layout_mode = 1
+offset_left = 814.0
+offset_top = 303.0
+offset_right = 1214.0
+offset_bottom = 703.0
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=1511709814]
 modulate = Color(0.9830678, 0, 0.3550994, 1)
 self_modulate = Color(0.9999998, 0.09660096, 0.7116718, 1)
 material = SubResource("ShaderMaterial_ypfif")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1520.0
-offset_bottom = -680.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 color = Color(0.7472146, 4.7168137e-06, 0.47576022, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=777116495]
-material = SubResource("ShaderMaterial_el1ct")
+[node name="Control" type="Control" parent="PanelContainer" unique_id=795769683]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="PanelContainer/Control" unique_id=1546291764]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 190.99998
-offset_right = 83.0
-offset_bottom = 210.99998
-scale = Vector2(5, 5)
-
-[node name="MainMenu" type="Button" parent="VBoxContainer" unique_id=1939676141]
-layout_mode = 2
-
-[node name="Resume" type="Button" parent="VBoxContainer" unique_id=1546291764]
-layout_mode = 2
+offset_left = 100.0
+offset_top = 271.0
+offset_right = 300.0
+offset_bottom = 302.0
 theme = SubResource("Theme_rks53")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l7mv")
+text = "Resume"
 
-[node name="WhiteButton" type="Control" parent="VBoxContainer" unique_id=581424549]
-layout_mode = 2
-theme = SubResource("Theme_3wosw")
+[node name="MainMenu" type="Button" parent="PanelContainer/Control" unique_id=1939676141]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 327.0
+offset_right = 301.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5d2l8")
+text = "Main Menu"
 
-[node name="WhiteButton2" type="Control" parent="VBoxContainer" unique_id=1442325275]
-layout_mode = 2
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1233158052]
+libraries/ = SubResource("AnimationLibrary_88e76")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1966587014]
+position = Vector2(1014, 411)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_5d2l8")
+
+[connection signal="pressed" from="PanelContainer/Control/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer/Control/MainMenu" to="." method="_on_main_menu_pressed"]
