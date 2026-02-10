@@ -75,7 +75,6 @@ func camera(_delta: float) -> void:
 	).grow(-screen_margin)
 
 	if not screen_rect.has_point(global_position):
-		print("OFFSCREEN")
 		die()
 
 func die() -> void:
