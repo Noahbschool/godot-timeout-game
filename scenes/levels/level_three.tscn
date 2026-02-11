@@ -158,8 +158,3 @@ position = Vector2(230, 1242)
 
 [node name="DeathZoneLevel3Part2" parent="." unique_id=331511488 instance=ExtResource("7_7ry6i")]
 position = Vector2(150, 469)
-
-[node name="Label" type="Label" parent="." unique_id=1717568426]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "HOW THE FUCK DID YOU GET HERE"
