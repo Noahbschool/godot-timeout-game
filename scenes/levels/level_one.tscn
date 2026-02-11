@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://chqaef4624y0w" path="res://scripts/level_one.gd" id="1_623cv"]
 [ext_resource type="PackedScene" uid="uid://b3qdn1nqan5yd" path="res://scenes/player.tscn" id="1_sn7cj"]
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="2_63ct5"]
+[ext_resource type="PackedScene" uid="uid://dpcf3tiawvi4g" path="res://scenes/win_menu.tscn" id="2_u6gdm"]
 [ext_resource type="Texture2D" uid="uid://dtt15xw4twsuw" path="res://graphics/level ijs cartoon versie.png" id="2_w53h0"]
 [ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="3_5tayq"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="3_63ct5"]
@@ -115,6 +116,7 @@ sources/0 = SubResource("TileSetAtlasSource_c6gv3")
 
 [node name="LevelOne" type="Node2D" unique_id=119961034]
 script = ExtResource("1_623cv")
+win_scene = ExtResource("2_u6gdm")
 
 [node name="Camera" type="Node2D" parent="." unique_id=2104836778]
 script = ExtResource("5_c6gv3")
