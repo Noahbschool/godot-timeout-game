@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cvc037qvqjvgv" path="res://scripts/level_two.gd" id="1_ivkd0"]
 [ext_resource type="Script" uid="uid://px5gdgive7i" path="res://scripts/camera.gd" id="1_q0tex"]
+[ext_resource type="PackedScene" uid="uid://t2otncva5ei7" path="res://scenes/win_menu_level_2.tscn" id="2_gqryv"]
 [ext_resource type="Texture2D" uid="uid://s3h53buf6k6u" path="res://graphics/level kristallen cartoon.png" id="2_ivkd0"]
 [ext_resource type="PackedScene" uid="uid://d030tq8l3mhw0" path="res://scenes/player_level_2.tscn" id="3_q0tex"]
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="4_5qm6s"]
 [ext_resource type="Texture2D" uid="uid://pdq4vaxggxo" path="res://graphics/Naamloos-3.png" id="5_q0tex"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="6_oei0b"]
-[ext_resource type="PackedScene" path="res://scenes/death_zone_level_2.tscn" id="7_q0tex"]
+[ext_resource type="PackedScene" uid="uid://dk3d58gr6obf1" path="res://scenes/death_zone_level_2.tscn" id="7_q0tex"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("4_5qm6s")
@@ -48,9 +49,6 @@ texture_region_size = Vector2i(1, 4)
 19:0/size_in_atlas = Vector2i(65, 17)
 19:0/0 = 0
 19:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.166664, -34.037186, 32.644356, -33.34077, 33.166668, 33.340775, -32.29615, 34.559494)
-1:40/size_in_atlas = Vector2i(19, 18)
-1:40/0 = 0
-1:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.269904, -36.822834, 9.662729, -36.126423, 9.4886265, 33.166664, -7.57349, 32.644356)
 80:40/size_in_atlas = Vector2i(25, 17)
 80:40/0 = 0
 80:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.622484, -34.037186, 11.926072, -33.514874, 10.881452, 34.38539, -12.796589, 34.037186)
@@ -84,6 +82,9 @@ texture_region_size = Vector2i(1, 4)
 17:87/size_in_atlas = Vector2i(105, 9)
 17:87/0 = 0
 17:87/0/physics_layer_0/polygon_0/points = PackedVector2Array(-53.821823, -16.809683, 53.014435, -17.67148, 52.492126, 18.716099, -51.97122, 19.277157)
+1:40/size_in_atlas = Vector2i(19, 17)
+1:40/0 = 0
+1:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.618111, -29.3364, -4.78784, -33.514877, 8.618111, -33.514877, 8.792217, 33.166668, -1.1316681, 32.818462, -7.9216957, 25.332022)
 
 [sub_resource type="TileSet" id="TileSet_c6gv3"]
 physics_layer_0/collision_layer = 1
@@ -118,6 +119,8 @@ sources/2 = SubResource("TileSetAtlasSource_ivkd0")
 
 [node name="LevelTwo" type="Node2D" unique_id=119961034]
 script = ExtResource("1_ivkd0")
+level_time = 3.0
+win_scene = ExtResource("2_gqryv")
 
 [node name="Camera" type="Node2D" parent="." unique_id=1923096053]
 script = ExtResource("1_q0tex")

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://d3j52lkelr8gr"]
+
+[ext_resource type="Texture2D" uid="uid://vb500bb0a2se" path="res://graphics/ChatGPT Image 11 feb 2026, 09_55_34_1920x1280.png" id="1_gx16r"]
+[ext_resource type="Script" uid="uid://davkbamf6s6hn" path="res://scripts/win_menu_level_3.gd" id="1_xx2ej"]
+[ext_resource type="Shader" uid="uid://gwxevfhs8b7a" path="res://shaders/pause_menu.gdshader" id="2_xx2ej"]
+[ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://shaders/new_shader.gdshader" id="3_4h1a2"]
+[ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="4_j4oa3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dmaew"]
+shader = ExtResource("2_xx2ej")
+shader_parameter/lod = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xx2ej"]
+shader = ExtResource("3_4h1a2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4h1a2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="WinMenuLevel3" type="Control" unique_id=1746940583]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xx2ej")
+
+[node name="ChatGptImage11Feb2026,0955341920x1280" type="Sprite2D" parent="." unique_id=1227193587]
+position = Vector2(960, 540)
+scale = Vector2(1, 0.84374994)
+texture = ExtResource("1_gx16r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1080960067]
+material = SubResource("ShaderMaterial_dmaew")
+layout_mode = 0
+offset_right = 1931.0
+offset_bottom = 1103.0
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=985937384]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=606305236]
+modulate = Color(0.9830678, 0, 0.3550994, 1)
+self_modulate = Color(0.9999998, 0.09660096, 0.7116718, 1)
+material = SubResource("ShaderMaterial_xx2ej")
+layout_mode = 2
+color = Color(0.7472146, 4.7168137e-06, 0.47576022, 1)
+
+[node name="Control" type="Control" parent="PanelContainer" unique_id=481358962]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Control" unique_id=236987273]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 209.0
+offset_right = 302.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "You win!"
+
+[node name="MainMenu" type="Button" parent="PanelContainer/Control" unique_id=796346988]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 339.0
+offset_right = 330.0
+offset_bottom = 364.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_4h1a2")
+text = "Main menu"
+
+[node name="LogoTimeOut1" type="Sprite2D" parent="PanelContainer" unique_id=1672300858]
+position = Vector2(200, 100)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_j4oa3")
+
+[connection signal="pressed" from="PanelContainer/Control/MainMenu" to="." method="_on_main_menu_pressed"]

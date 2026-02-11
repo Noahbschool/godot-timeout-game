@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://px5gdgive7i" path="res://scripts/camera.gd" id="1_7ry6i"]
 [ext_resource type="Script" uid="uid://c8pvimi2pnd64" path="res://scripts/level_three.gd" id="1_vmov0"]
+[ext_resource type="PackedScene" uid="uid://d3j52lkelr8gr" path="res://scenes/win_menu_level_3.tscn" id="2_7s1bx"]
 [ext_resource type="Texture2D" uid="uid://bbbum3ds0mgvi" path="res://graphics/lava level achtergrond.png" id="2_vmov0"]
 [ext_resource type="PackedScene" uid="uid://mrcv305hbl6h" path="res://scenes/player_level_3.tscn" id="3_7ry6i"]
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="4_jbu4w"]
 [ext_resource type="Texture2D" uid="uid://crbp6y722br04" path="res://graphics/Naamloos-4.png" id="5_7ry6i"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="6_31lil"]
-[ext_resource type="PackedScene" path="res://scenes/death_zone_level_3.tscn" id="7_7ry6i"]
+[ext_resource type="PackedScene" uid="uid://s3eoxq5oq042" path="res://scenes/death_zone_level_3.tscn" id="7_7ry6i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("4_jbu4w")
@@ -115,6 +116,8 @@ sources/1 = SubResource("TileSetAtlasSource_vmov0")
 
 [node name="LevelThree" type="Node2D" unique_id=119961034]
 script = ExtResource("1_vmov0")
+level_time = 3.0
+win_scene = ExtResource("2_7s1bx")
 
 [node name="Camera" type="Node2D" parent="." unique_id=415789623]
 script = ExtResource("1_7ry6i")

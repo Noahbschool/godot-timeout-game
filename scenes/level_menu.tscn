@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brhj7axw0ud66"]
 
-[ext_resource type="Script" path="res://scripts/level_menu.gd" id="1_jqwib"]
+[ext_resource type="Script" uid="uid://h4vlmgu1wvvg" path="res://scripts/level_menu.gd" id="1_jqwib"]
 [ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://shaders/new_shader.gdshader" id="1_rj3wb"]
 [ext_resource type="Texture2D" uid="uid://vb500bb0a2se" path="res://graphics/ChatGPT Image 11 feb 2026, 09_55_34_1920x1280.png" id="2_7obll"]
 [ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="2_jqwib"]
@@ -43,13 +43,15 @@ modulate = Color(0.9830678, 0, 0.3550994, 1)
 self_modulate = Color(0.9999998, 0.09660096, 0.7116718, 1)
 material = SubResource("ShaderMaterial_7obll")
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 750.0
-offset_top = 250.0
-offset_right = -770.0
-offset_bottom = -430.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.7472146, 4.7168137e-06, 0.47576022, 1)
@@ -62,9 +64,9 @@ offset_bottom = 76.0
 [node name="MainMenu" type="Button" parent="Control" unique_id=1092888810]
 layout_mode = 0
 offset_left = 830.0
-offset_top = 570.0
+offset_top = 670.0
 offset_right = 1080.0
-offset_bottom = 595.0
+offset_bottom = 695.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_teein")
 text = "Main Menu"
@@ -72,9 +74,9 @@ text = "Main Menu"
 [node name="Level 1" type="Button" parent="Control" unique_id=1423963855]
 layout_mode = 0
 offset_left = 817.0
-offset_top = 520.0
+offset_top = 620.0
 offset_right = 886.0
-offset_bottom = 545.0
+offset_bottom = 645.0
 theme = SubResource("Theme_k08aj")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_2go0k")
@@ -84,9 +86,9 @@ text = "Level 1
 [node name="Level 2" type="Button" parent="Control" unique_id=898087505]
 layout_mode = 0
 offset_left = 918.0
-offset_top = 520.0
+offset_top = 620.0
 offset_right = 987.0
-offset_bottom = 545.0
+offset_bottom = 645.0
 theme = SubResource("Theme_k08aj")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_2go0k")
@@ -96,16 +98,16 @@ text = "Level 2
 [node name="Level 3" type="Button" parent="Control" unique_id=759633775]
 layout_mode = 0
 offset_left = 1018.0
-offset_top = 520.0
+offset_top = 620.0
 offset_right = 1087.0
-offset_bottom = 545.0
+offset_bottom = 645.0
 theme = SubResource("Theme_k08aj")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_2go0k")
 text = "Level 3"
 
 [node name="LogoTimeOut1" type="Sprite2D" parent="." unique_id=1687387689]
-position = Vector2(950, 350)
+position = Vector2(950, 450)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_jqwib")
 

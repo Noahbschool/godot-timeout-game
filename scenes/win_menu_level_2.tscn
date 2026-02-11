@@ -1,47 +1,47 @@
-[gd_scene format=3 uid="uid://dpcf3tiawvi4g"]
+[gd_scene format=3 uid="uid://t2otncva5ei7"]
 
-[ext_resource type="Shader" uid="uid://gwxevfhs8b7a" path="res://shaders/pause_menu.gdshader" id="1_7shsi"]
-[ext_resource type="Script" uid="uid://4ceba2y26od1" path="res://scripts/win_menu.gd" id="1_ah3fa"]
-[ext_resource type="Texture2D" uid="uid://vb500bb0a2se" path="res://graphics/ChatGPT Image 11 feb 2026, 09_55_34_1920x1280.png" id="1_dmaew"]
-[ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://shaders/new_shader.gdshader" id="1_jx1is"]
-[ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="2_7shsi"]
+[ext_resource type="Script" uid="uid://b65vthuoqfm6s" path="res://scripts/win_menu_level_2.gd" id="1_pmlts"]
+[ext_resource type="Texture2D" uid="uid://vb500bb0a2se" path="res://graphics/ChatGPT Image 11 feb 2026, 09_55_34_1920x1280.png" id="1_uh1b8"]
+[ext_resource type="Shader" uid="uid://gwxevfhs8b7a" path="res://shaders/pause_menu.gdshader" id="2_pmlts"]
+[ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://shaders/new_shader.gdshader" id="3_auinr"]
+[ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="4_ytfk7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dmaew"]
-shader = ExtResource("1_7shsi")
+shader = ExtResource("2_pmlts")
 shader_parameter/lod = 0.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ah3fa"]
-shader = ExtResource("1_jx1is")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pmlts"]
+shader = ExtResource("3_auinr")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xbon"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auinr"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="Theme" id="Theme_xtbbn"]
+[sub_resource type="Theme" id="Theme_ytfk7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w75pu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gj2kh"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[node name="WinMenu" type="Control" unique_id=1746940583]
+[node name="WinMenuLevel2" type="Control" unique_id=1746940583]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ah3fa")
+script = ExtResource("1_pmlts")
 
 [node name="ChatGptImage11Feb2026,0955341920x1280" type="Sprite2D" parent="." unique_id=1227193587]
 position = Vector2(960, 540)
 scale = Vector2(1, 0.84374994)
-texture = ExtResource("1_dmaew")
+texture = ExtResource("1_uh1b8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1080960067]
 material = SubResource("ShaderMaterial_dmaew")
@@ -49,7 +49,7 @@ layout_mode = 0
 offset_right = 1931.0
 offset_bottom = 1103.0
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=52748274]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=247084342]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -63,17 +63,17 @@ offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=1997457935]
+[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=231666148]
 modulate = Color(0.9830678, 0, 0.3550994, 1)
 self_modulate = Color(0.9999998, 0.09660096, 0.7116718, 1)
-material = SubResource("ShaderMaterial_ah3fa")
+material = SubResource("ShaderMaterial_pmlts")
 layout_mode = 2
 color = Color(0.7472146, 4.7168137e-06, 0.47576022, 1)
 
-[node name="Control" type="Control" parent="PanelContainer" unique_id=1966759249]
+[node name="Control" type="Control" parent="PanelContainer" unique_id=1904627412]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/Control" unique_id=1281575317]
+[node name="Label" type="Label" parent="PanelContainer/Control" unique_id=1048454407]
 layout_mode = 0
 offset_left = 109.0
 offset_top = 209.0
@@ -83,32 +83,32 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
 text = "You win!"
 
-[node name="MainMenu" type="Button" parent="PanelContainer/Control" unique_id=1923193330]
+[node name="MainMenu" type="Button" parent="PanelContainer/Control" unique_id=419007437]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 339.0
 offset_right = 330.0
 offset_bottom = 364.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_1xbon")
+theme_override_styles/normal = SubResource("StyleBoxFlat_auinr")
 text = "Main menu"
 
-[node name="NextLevel" type="Button" parent="PanelContainer/Control" unique_id=370356727]
+[node name="NextLevel" type="Button" parent="PanelContainer/Control" unique_id=176709359]
 process_mode = 3
 layout_mode = 0
 offset_left = 80.0
 offset_top = 294.0
 offset_right = 330.0
 offset_bottom = 319.0
-theme = SubResource("Theme_xtbbn")
+theme = SubResource("Theme_ytfk7")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_w75pu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gj2kh")
 text = "Next level"
 
-[node name="LogoTimeOut1" type="Sprite2D" parent="PanelContainer" unique_id=465936253]
+[node name="LogoTimeOut1" type="Sprite2D" parent="PanelContainer" unique_id=1199661392]
 position = Vector2(200, 100)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_7shsi")
+texture = ExtResource("4_ytfk7")
 
 [connection signal="pressed" from="PanelContainer/Control/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="PanelContainer/Control/NextLevel" to="." method="_on_next_level_pressed"]
