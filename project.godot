@@ -14,6 +14,10 @@ config/name="time out"
 run/main_scene="uid://du1vod8tw4qtk"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+GameState="*uid://c7drta7a4svpj"
+
 [display]
 
 window/size/viewport_width=1920

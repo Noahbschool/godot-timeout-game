@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://dpcf3tiawvi4g"]
+[gd_scene format=3 uid="uid://bxwl4jbgon42i"]
 
 [ext_resource type="Shader" uid="uid://gwxevfhs8b7a" path="res://shaders/pause_menu.gdshader" id="1_7shsi"]
 [ext_resource type="Texture2D" uid="uid://vb500bb0a2se" path="res://graphics/ChatGPT Image 11 feb 2026, 09_55_34_1920x1280.png" id="1_dmaew"]
+[ext_resource type="Shader" path="res://shaders/pause_menu.gdshader" id="1_7shsi"]
+[ext_resource type="Script" uid="uid://drcn57mctrmmd" path="res://scripts/win_menu.gd" id="1_dmaew"]
 [ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://shaders/new_shader.gdshader" id="1_jx1is"]
 [ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="2_7shsi"]
 
@@ -96,6 +98,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dmaew")
 
 [node name="ChatGptImage11Feb2026,0955341920x1280" type="Sprite2D" parent="." unique_id=1227193587]
 position = Vector2(960, 540)
