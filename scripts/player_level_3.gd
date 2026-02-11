@@ -7,8 +7,11 @@ var speed_multiplier: float = 30.0
 var jump_multiplier: float = -40.0
 var can_control: bool = true
 
+@export var screen_margin := 8.0
+
 @onready var animation_player = $Node2D/AnimationPlayer
 @onready var sprite = $Node2D/Sprite2D
+
 
 func _physics_process(delta: float) -> void:
 	if not can_control:
@@ -33,6 +36,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
 
 	move_and_slide()
+
+	# Detect collision with TileMap2
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+
+		if collider.name == "TileMap2":
+			die()
+
 	update_animations(direction)
 
 
@@ -54,19 +66,14 @@ func update_animations(direction):
 			animation_player.play(new_anim, -1.0, 2.5)
 		else:
 			animation_player.play(new_anim)
-			
-@export var screen_margin := 8.0
+
 
 func camera(_delta: float) -> void:
 	var cam: Camera2D = get_viewport().get_camera_2d()
 	if cam == null or not cam.enabled:
-		# Helpful debug (optional):
-		# print("No enabled Camera2D found")
 		return
 
 	var vp_size: Vector2 = get_viewport_rect().size
-
-	# ✅ divide by zoom (zoom in => smaller visible area)
 	var half_world: Vector2 = (vp_size * 0.5) / cam.zoom
 
 	var screen_rect: Rect2 = Rect2(
@@ -77,5 +84,15 @@ func camera(_delta: float) -> void:
 	if not screen_rect.has_point(global_position):
 		die()
 
+
+var is_dead := false
+
 func die() -> void:
-	get_tree().change_scene_to_file("res://scenes/death_menu_level_3.tscn")
+	if is_dead:
+		return
+
+	is_dead = true
+	can_control = false
+
+	if get_tree():
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/death_menu_level_3.tscn")
