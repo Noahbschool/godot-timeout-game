@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://3gdedkt1rom1"]
 
-[ext_resource type="Script" uid="uid://2v53w6ffrj3x" path="res://scripts/level_two.gd" id="1_ivkd0"]
 [ext_resource type="Script" uid="uid://px5gdgive7i" path="res://scripts/camera.gd" id="1_q0tex"]
 [ext_resource type="Texture2D" uid="uid://s3h53buf6k6u" path="res://graphics/level kristallen cartoon.png" id="2_ivkd0"]
 [ext_resource type="PackedScene" uid="uid://d030tq8l3mhw0" path="res://scenes/player_level_2.tscn" id="3_q0tex"]
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="4_5qm6s"]
 [ext_resource type="Texture2D" uid="uid://pdq4vaxggxo" path="res://graphics/Naamloos-3.png" id="5_q0tex"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="6_oei0b"]
-[ext_resource type="PackedScene" path="res://scenes/death_zone_level_2.tscn" id="7_q0tex"]
+[ext_resource type="PackedScene" uid="uid://dk3d58gr6obf1" path="res://scenes/death_zone_level_2.tscn" id="7_q0tex"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("4_5qm6s")
@@ -117,8 +116,6 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_ivkd0")
 
 [node name="LevelTwo" type="Node2D" unique_id=119961034]
-script = ExtResource("1_ivkd0")
-level_time = 45.0
 
 [node name="Camera" type="Node2D" parent="." unique_id=1923096053]
 script = ExtResource("1_q0tex")
@@ -149,14 +146,6 @@ layer_0/tile_data = PackedInt32Array(8257587, 720898, 11)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1532090044]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("6_oei0b")]
-
-[node name="TimeLabel" type="Label" parent="CanvasLayer" unique_id=414776697]
-anchors_preset = -1
-offset_left = 150.0
-offset_top = 150.0
-offset_right = 190.0
-offset_bottom = 173.0
-scale = Vector2(2, 2)
 
 [node name="DeathZoneLevel2" parent="." unique_id=2055673178 instance=ExtResource("7_q0tex")]
 position = Vector2(269, 1264)
