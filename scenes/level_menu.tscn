@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dqykdyh0lnoac"]
+[gd_scene format=3 uid="uid://brhj7axw0ud66"]
 
-[ext_resource type="Script" uid="uid://h4vlmgu1wvvg" path="res://scripts/level_menu.gd" id="1_jqwib"]
+[ext_resource type="Script" path="res://scripts/level_menu.gd" id="1_jqwib"]
 [ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://shaders/new_shader.gdshader" id="1_rj3wb"]
 [ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="2_jqwib"]
 
@@ -65,9 +65,9 @@ text = "Main Menu"
 
 [node name="Level 1" type="Button" parent="Control" unique_id=1423963855]
 layout_mode = 0
-offset_left = 830.0
+offset_left = 817.0
 offset_top = 520.0
-offset_right = 888.0
+offset_right = 886.0
 offset_bottom = 545.0
 theme = SubResource("Theme_k08aj")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -77,9 +77,9 @@ text = "Level 1
 
 [node name="Level 2" type="Button" parent="Control" unique_id=898087505]
 layout_mode = 0
-offset_left = 919.0
+offset_left = 918.0
 offset_top = 520.0
-offset_right = 977.0
+offset_right = 987.0
 offset_bottom = 545.0
 theme = SubResource("Theme_k08aj")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -89,9 +89,9 @@ text = "Level 2
 
 [node name="Level 3" type="Button" parent="Control" unique_id=759633775]
 layout_mode = 0
-offset_left = 1019.0
+offset_left = 1018.0
 offset_top = 520.0
-offset_right = 1077.0
+offset_right = 1087.0
 offset_bottom = 545.0
 theme = SubResource("Theme_k08aj")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
