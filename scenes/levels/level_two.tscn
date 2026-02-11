@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://s3h53buf6k6u" path="res://graphics/level kristallen cartoon.png" id="2_ivkd0"]
 [ext_resource type="PackedScene" uid="uid://d030tq8l3mhw0" path="res://scenes/player_level_2.tscn" id="3_q0tex"]
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="4_5qm6s"]
-[ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="5_chx1n"]
+[ext_resource type="Texture2D" uid="uid://pdq4vaxggxo" path="res://graphics/Naamloos-3.png" id="5_q0tex"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="6_oei0b"]
 [ext_resource type="PackedScene" path="res://scenes/death_zone_level_2.tscn" id="7_q0tex"]
 
@@ -89,23 +89,32 @@ texture_region_size = Vector2i(1, 4)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_5tayq")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6gv3"]
-texture = ExtResource("5_chx1n")
-texture_region_size = Vector2i(3, 3)
-0:0/size_in_atlas = Vector2i(26, 29)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivkd0"]
+texture = ExtResource("5_q0tex")
+texture_region_size = Vector2i(4, 4)
+0:0/size_in_atlas = Vector2i(8, 21)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-38.55432, -42.218575, 37.59842, -43.17447, 28.95726, 31.025627, -2.549057, 40.306793, -33.453728, 31.20549)
-38:25/size_in_atlas = Vector2i(45, 12)
-38:25/0 = 0
-38:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-67.80674, -17.716087, 67.44702, -18.255663, 67.267166, 17.716084, -67.44702, 17.176506)
-33:38/size_in_atlas = Vector2i(19, 25)
-33:38/0 = 0
-33:38/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.367142, 15.917496, -19.424744, -13.039759, -10.07209, -36.421394, 6.834633, -15.9175, 9.892227, 12.500179, 21.942764, -1.528801, 26.79895, 17.536224, 20.863617, 34.98252, -18.345589, 37.86026, -25.360085, 24.190998, -25.719795, 11.241169)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.192814, -14.0337715, -7.5566444, -42.10132, 6.3229103, -32.53985, 14.959076, 14.342205, 8.790386, 39.942276, -11.257861, 40.25071)
+11:11/size_in_atlas = Vector2i(19, 10)
+11:11/0 = 0
+11:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.773582, -16.809683, 26.988022, -20.510897, 34.082016, 1.0795212, 33.773582, 18.043423, -36.24106, 18.043423, -37.474796, 1.3879547)
+31:5/size_in_atlas = Vector2i(8, 17)
+31:5/0 = 0
+31:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.173517, -34.082016, 13.108467, -2.9301262, 14.959076, 13.725338, 11.566296, 34.08202, -7.248211, 29.147068, -14.959074, 4.163868)
+45:4/size_in_atlas = Vector2i(16, 19)
+45:4/0 = 0
+45:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.418617, -40.707603, 33.057854, -38.52196, 31.418617, 23.768867, -1.3660278, 39.068367, -28.140152, 31.965027)
+49:29/size_in_atlas = Vector2i(4, 16)
+49:29/0 = 0
+49:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.780735, -31.922974, 6.9397774, -31.922974, 8.269905, 1.1316719, 5.7060394, 31.30611, -5.0891685, 30.99767)
+2:41/size_in_atlas = Vector2i(7, 6)
+2:41/0 = 0
+2:41/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.055556, -2.524496, -0.43525887, -12.448381, 11.403763, -4.091425, 10.707348, 12.448383, 2.3503933, 11.577866, -11.577866, 12.796589)
 
 [sub_resource type="TileSet" id="TileSet_vsfy4"]
 tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_c6gv3")
+sources/2 = SubResource("TileSetAtlasSource_ivkd0")
 
 [node name="LevelTwo" type="Node2D" unique_id=119961034]
 script = ExtResource("1_ivkd0")
@@ -135,6 +144,7 @@ layer_0/tile_data = PackedInt32Array(4390907, 1310721, 40, 4390908, 1310721, 40,
 [node name="TileMap2" type="TileMap" parent="." unique_id=1046566493]
 tile_set = SubResource("TileSet_vsfy4")
 format = 2
+layer_0/tile_data = PackedInt32Array(8257587, 720898, 11)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1532090044]
 
