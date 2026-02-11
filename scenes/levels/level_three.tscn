@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="4_jbu4w"]
 [ext_resource type="Texture2D" uid="uid://crbp6y722br04" path="res://graphics/Naamloos-4.png" id="5_7ry6i"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="6_31lil"]
-[ext_resource type="PackedScene" uid="uid://s3eoxq5oq042" path="res://scenes/death_zone_level_3.tscn" id="7_7ry6i"]
+[ext_resource type="PackedScene" path="res://scenes/death_zone_level_3.tscn" id="7_7ry6i"]
+[ext_resource type="Texture2D" uid="uid://cwcwgstmljqaw" path="res://graphics/zandloper voor in het spel.png" id="9_jbu4w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("4_jbu4w")
@@ -151,6 +152,13 @@ format = 2
 [node name="TimeLabel" type="Label" parent="CanvasLayer" unique_id=150575460]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TimeLabel" unique_id=999125675]
+texture = ExtResource("9_jbu4w")
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer/TimeLabel" unique_id=685263282]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/TimeLabel/Node2D" unique_id=1682166559]
 
 [node name="DeathZoneLevel3" parent="." unique_id=2055673178 instance=ExtResource("7_7ry6i")]
 position = Vector2(230, 1242)
