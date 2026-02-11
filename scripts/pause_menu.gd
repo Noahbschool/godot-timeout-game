@@ -1,29 +1,29 @@
 extends Control
 
-func _ready() -> void:
+func _ready():
 	$AnimationPlayer.play("RESET")
 
-func resume() -> void:
-	GameState.set_paused(false)
-
-func pause() -> void:
-	GameState.set_paused(true)
+func resume():
+	get_tree().paused = false
+	$AnimationPlayer.play_backwards("blur")
+	
+func pause():
+	get_tree().paused = true
+	$AnimationPlayer.play("blur")
+	
+func testEsc():
+	if Input.is_action_just_pressed("esc") and get_tree().paused == false:
+		pause()
+	elif Input.is_action_just_pressed("esc") and get_tree().paused == true:
+		resume()
 
 func _on_main_menu_pressed() -> void:
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
+
 func _on_resume_pressed() -> void:
 	resume()
 
-var was_paused := false
-
-func _process(_delta: float) -> void:
-	if get_tree().paused != was_paused:
-		was_paused = get_tree().paused
-		if was_paused:
-			visible = true
-			$AnimationPlayer.play("blur")
-		else:
-			$AnimationPlayer.play_backwards("blur")
-			visible = false
+func _process(delta):
+	testEsc()

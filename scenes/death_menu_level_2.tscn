@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://delwo28xa3oeh"]
 
 [ext_resource type="Script" uid="uid://b2vv0cgvibtst" path="res://scripts/death_menu_level_2.gd" id="1_gotjn"]
+[ext_resource type="Texture2D" uid="uid://vb500bb0a2se" path="res://graphics/ChatGPT Image 11 feb 2026, 09_55_34_1920x1280.png" id="2_gyuf5"]
 [ext_resource type="Shader" uid="uid://gwxevfhs8b7a" path="res://shaders/pause_menu.gdshader" id="2_hbsrq"]
 [ext_resource type="Shader" uid="uid://bvdbog1lcsf63" path="res://shaders/new_shader.gdshader" id="3_gyuf5"]
 [ext_resource type="Texture2D" uid="uid://rqx3hnwp5381" path="res://graphics/logo time out 1.png" id="4_v0wlh"]
@@ -50,6 +51,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gotjn")
+
+[node name="ChatGptImage11Feb2026,0955341920x1280" type="Sprite2D" parent="." unique_id=873856364]
+position = Vector2(960, 540)
+scale = Vector2(0.99999994, 0.84375006)
+texture = ExtResource("2_gyuf5")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=512167601]
 modulate = Color(1, 1, 1, 0)
