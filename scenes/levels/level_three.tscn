@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b6av7f0lxb1bs" path="res://graphics/tiles.png" id="4_jbu4w"]
 [ext_resource type="Texture2D" uid="uid://crbp6y722br04" path="res://graphics/Naamloos-4.png" id="5_7ry6i"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="6_31lil"]
-[ext_resource type="PackedScene" uid="uid://s3eoxq5oq042" path="res://scenes/death_zone_level_3.tscn" id="7_7ry6i"]
+[ext_resource type="PackedScene" path="res://scenes/death_zone_level_3.tscn" id="7_7ry6i"]
+[ext_resource type="AudioStream" uid="uid://h8ae3ha82vxu" path="res://audio/Molten Core Pulse (1).mp3" id="10_jbu4w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("4_jbu4w")
@@ -158,3 +159,8 @@ position = Vector2(230, 1242)
 
 [node name="DeathZoneLevel3Part2" parent="." unique_id=331511488 instance=ExtResource("7_7ry6i")]
 position = Vector2(150, 469)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1921242009]
+stream = ExtResource("10_jbu4w")
+autoplay = true
+parameters/looping = true

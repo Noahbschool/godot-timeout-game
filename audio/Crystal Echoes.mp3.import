@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://87lp7x3vgyux"
+path="res://.godot/imported/Crystal Echoes.mp3-875c7b5c34ff0ba917ac05ee137934c0.mp3str"
+
+[deps]
+
+source_file="res://audio/Crystal Echoes.mp3"
+dest_files=["res://.godot/imported/Crystal Echoes.mp3-875c7b5c34ff0ba917ac05ee137934c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
