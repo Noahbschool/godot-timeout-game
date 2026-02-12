@@ -45,6 +45,9 @@ func _physics_process(delta: float) -> void:
 		if collider.name == "TileMap2":
 			die()
 
+		if collider.get_parent() is Monster:
+			die()
+
 	update_animations(direction)
 
 
