@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://fwgu77qla6oe"]
+
+[ext_resource type="Script" uid="uid://ceus61qsg5ts1" path="res://scripts/monster_level_one.gd" id="1_44nbs"]
+[ext_resource type="Texture2D" uid="uid://3d1rakbu75fc" path="res://graphics/lava monster movement.png" id="2_nlwby"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcaso"]
+radius = 22.0
+height = 64.0
+
+[node name="Monster" type="Path2D" unique_id=333691288 node_paths=PackedStringArray("path_follow_2D")]
+script = ExtResource("1_44nbs")
+path_follow_2D = NodePath("PathFollow2D")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=1392184962]
+position = Vector2(-109, -1)
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D" unique_id=1072745446]
+remote_path = NodePath("../../AnimatableBody2D")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=273346111]
+position = Vector2(-109, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=1823961114]
+position = Vector2(12, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nlwby")
+region_enabled = true
+region_rect = Rect2(148, 100, 134, 172)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=301039044]
+position = Vector2(4, 2)
+shape = SubResource("CapsuleShape2D_dcaso")
