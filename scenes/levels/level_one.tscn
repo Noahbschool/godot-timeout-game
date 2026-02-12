@@ -170,10 +170,14 @@ layer_0/tile_data = PackedInt32Array(9044025, 3473408, 25, 9044030, 3473408, 25,
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("3_63ct5")]
 
 [node name="TimeLabel" type="Label" parent="CanvasLayer" unique_id=1547825276]
-offset_right = 40.0
-offset_bottom = 23.0
-scale = Vector2(2, 2)
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 123.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 48
 
 [node name="DeathZone" parent="." unique_id=1150798076 instance=ExtResource("4_5tayq")]
 position = Vector2(344, 1144)
