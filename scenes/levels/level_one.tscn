@@ -7,10 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dtt15xw4twsuw" path="res://graphics/level ijs cartoon versie.png" id="2_w53h0"]
 [ext_resource type="Texture2D" uid="uid://btmfopvqm56we" path="res://graphics/Naamloos-1 1 (3).png" id="3_5tayq"]
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="3_63ct5"]
-[ext_resource type="PackedScene" path="res://scenes/death_zone.tscn" id="4_5tayq"]
+[ext_resource type="PackedScene" uid="uid://dpa0wpf86ryqe" path="res://scenes/death_zone.tscn" id="4_5tayq"]
 [ext_resource type="Script" uid="uid://px5gdgive7i" path="res://scripts/camera.gd" id="5_c6gv3"]
 [ext_resource type="PackedScene" uid="uid://btwker0hnruve" path="res://scenes/monster_level_one.tscn" id="6_a1u8d"]
-[ext_resource type="AudioStream" uid="uid://dlnde186m2ddb" path="res://audio/Frozen Echoes.mp3" id="11_8ri5e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("2_63ct5")
@@ -168,10 +167,6 @@ layer_0/tile_data = PackedInt32Array(9044025, 3473408, 25, 9044030, 3473408, 25,
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1532090044]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2089087006 instance=ExtResource("3_63ct5")]
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 5.0
-offset_bottom = 2.0
 
 [node name="TimeLabel" type="Label" parent="CanvasLayer" unique_id=1547825276]
 offset_right = 40.0
@@ -181,8 +176,3 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="DeathZone" parent="." unique_id=1150798076 instance=ExtResource("4_5tayq")]
 position = Vector2(344, 1144)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1807953826]
-stream = ExtResource("11_8ri5e")
-autoplay = true
-parameters/looping = true
