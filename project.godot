@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="time out"
-run/main_scene="uid://3gdedkt1rom1"
+run/main_scene="uid://dyhu24em1yao3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
