@@ -38,12 +38,18 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	# Detect collision with TileMap2
+# Detect collisions
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 
 		if collider.name == "TileMap2":
 			die()
+
+		if collider.get_parent() is Monster:
+			die()
+
+
 
 	update_animations(direction)
 
