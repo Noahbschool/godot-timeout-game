@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d3xua0pryetgs" path="res://scenes/pause_menu.tscn" id="6_oei0b"]
 [ext_resource type="PackedScene" uid="uid://dk3d58gr6obf1" path="res://scenes/death_zone_level_2.tscn" id="7_q0tex"]
 [ext_resource type="PackedScene" uid="uid://blfyawd5rgule" path="res://scenes/monster_Level_2.tscn" id="10_5qm6s"]
+[ext_resource type="AudioStream" uid="uid://c1yew5il8ssip" path="res://audio/Crystal Echoes.mp3" id="11_chx1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tayq"]
 texture = ExtResource("4_5qm6s")
@@ -169,3 +170,8 @@ position = Vector2(269, 1264)
 [node name="Monster" parent="." unique_id=333691288 instance=ExtResource("10_5qm6s")]
 position = Vector2(3, 1001)
 curve = SubResource("Curve2D_chx1n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1163684877]
+stream = ExtResource("11_chx1n")
+autoplay = true
+parameters/looping = true
